@@ -53,7 +53,7 @@ public final class Perpustakaan extends javax.swing.JFrame {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "An error occurred while processing the data.");
         }
     }
 
@@ -253,7 +253,6 @@ public final class Perpustakaan extends javax.swing.JFrame {
                 }
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             JOptionPane.showMessageDialog(this, "An error occurred while processing the data.");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -269,7 +268,6 @@ public final class Perpustakaan extends javax.swing.JFrame {
                 loadData();
             }
         } catch (SQLException e) {
-            e.printStackTrace();
             JOptionPane.showMessageDialog(this, "An error occurred while processing the data.");
         }
     }//GEN-LAST:event_jButton3ActionPerformed
