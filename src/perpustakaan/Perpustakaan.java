@@ -115,6 +115,12 @@ public final class Perpustakaan extends javax.swing.JFrame {
             }
         });
 
+        jScrollPane.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jScrollPaneFocusGained(evt);
+            }
+        });
+
         jTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -126,6 +132,11 @@ public final class Perpustakaan extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jTable.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jTableFocusGained(evt);
+            }
+        });
         jTable.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTableMouseClicked(evt);
@@ -278,6 +289,27 @@ public final class Perpustakaan extends javax.swing.JFrame {
             }
     }//GEN-LAST:event_jTableMouseClicked
 
+    private void jTableFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTableFocusGained
+        int r = jTable.getSelectedRow();
+        int c = jTable.getSelectedColumn();
+
+        if (r != -1 && c != -1) {
+            String value = jTable.getValueAt(r, c).toString();
+            switch (c) {
+                case 0 -> jTextField1.setText(value);
+                case 1 -> jTextField2.setText(value);
+                case 2 -> jTextField3.setText(value);
+                case 3 -> jTextField4.setText(value);
+                default -> {
+                }
+            }
+        }
+    }//GEN-LAST:event_jTableFocusGained
+
+    private void jScrollPaneFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jScrollPaneFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jScrollPaneFocusGained
+
     /**
      * @param args the command line arguments
      */
@@ -306,10 +338,8 @@ public final class Perpustakaan extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new Perpustakaan().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new Perpustakaan().setVisible(true);
         });
     }
 
