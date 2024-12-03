@@ -1,0 +1,54 @@
+<a name="readme-top"></a>
+
+<div align="center">
+
+## Perpustakaan Java
+
+</div>
+
+<!-- PROJECT LOGO -->
+</br>
+<div align="center">
+  <a href="https://www.unud.ac.id/">
+    <img src="https://github.com/dash4k/tugas-akhir-alpro-1/assets/133938416/ff71757a-1b51-44b7-b14e-b53b061d9815" alt="Logo" width="230" height="259">
+  </a>
+
+<h3 align="center">Tugas 4 Pemrograman Berbasis Objek</h3>
+
+  <p align="center">
+    Library management app written in Java, using Mysql for the database and Ant for the built tool 
+    </br>
+  </p>
+</div>
+</br>
+
+## Build from source
+
+1. Clone the repo
+   ```sh
+   https://github.com/dash4k/3-pbo-perpustakaan.git
+   ```
+2. Go to the build directory
+   ```sh
+   cd /3-pbo-perpustakaan
+   ```
+3. Make the binary
+   ```sh
+   ant compile
+   ```
+4. Run the binary
+   ```sh
+   ant run
+   ```
+5. Clean the binary
+   ```sh
+   ant clean
+   ```
+</br>
+
+
+
+<!-- CONTACT -->
+## Authors
+
+Danishwara Pracheta (2308561050): [@dash4k](https://www.github.com/dash4k)
